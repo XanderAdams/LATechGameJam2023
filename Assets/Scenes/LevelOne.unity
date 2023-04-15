@@ -1241,7 +1241,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2479565286881386162, guid: b3a55b69ac470fe43ac8100d86d622e2, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2479565286881386172, guid: b3a55b69ac470fe43ac8100d86d622e2, type: 3}
       propertyPath: m_LocalScale.x
@@ -1373,11 +1373,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2479565287136419000, guid: b3a55b69ac470fe43ac8100d86d622e2, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.75
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2479565287136419000, guid: b3a55b69ac470fe43ac8100d86d622e2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2479565287136419000, guid: b3a55b69ac470fe43ac8100d86d622e2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1404,16 +1404,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2479565287136419001, guid: b3a55b69ac470fe43ac8100d86d622e2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1940191425, guid: 9be79fe314af2d54d9f7123ba1b75505, type: 3}
+    - target: {fileID: 2479565287136419001, guid: b3a55b69ac470fe43ac8100d86d622e2, type: 3}
       propertyPath: m_Color.b
-      value: 0.6037736
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2479565287136419001, guid: b3a55b69ac470fe43ac8100d86d622e2, type: 3}
       propertyPath: m_Color.g
-      value: 0.6037736
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2479565287136419001, guid: b3a55b69ac470fe43ac8100d86d622e2, type: 3}
       propertyPath: m_Color.r
-      value: 0.6037736
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2479565287136419001, guid: b3a55b69ac470fe43ac8100d86d622e2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2479565287136419006, guid: b3a55b69ac470fe43ac8100d86d622e2, type: 3}
       propertyPath: m_Layer
@@ -1421,7 +1429,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2479565287136419006, guid: b3a55b69ac470fe43ac8100d86d622e2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2479565287303635881, guid: b3a55b69ac470fe43ac8100d86d622e2, type: 3}
       propertyPath: PlayerOne
@@ -1437,7 +1445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2479565287303635884, guid: b3a55b69ac470fe43ac8100d86d622e2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2479565287303635886, guid: b3a55b69ac470fe43ac8100d86d622e2, type: 3}
       propertyPath: m_LocalScale.x
@@ -1471,6 +1479,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2479565287071371837, guid: b3a55b69ac470fe43ac8100d86d622e2, type: 3}
   m_PrefabInstance: {fileID: 286498742}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &759087313 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2479565287136419006, guid: b3a55b69ac470fe43ac8100d86d622e2, type: 3}
+  m_PrefabInstance: {fileID: 286498742}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &759087317
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759087313}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cfd02fb145224ad46ba39032c870a7d5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1003381397
 GameObject:
   m_ObjectHideFlags: 0

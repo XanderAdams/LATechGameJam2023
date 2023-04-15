@@ -86,6 +86,7 @@ public class PlayerManager : MonoBehaviour
         {
             Debug.Log("Test");
             playerMovement.POneanimator.SetBool("IsJumping", false);
+            playerMovement.PTwoanimator.SetBool("IsJumping", false);
             playerMovement.POneanimator.SetBool("IsDashing", false);
         }
     }

@@ -42,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
         float dirX = Input.GetAxisRaw("Horizontal"); //Getting the direction of the object
 
         POneanimator.SetFloat("Speed", Mathf.Abs(dirX));
+        PTwoanimator.SetFloat("Speed", Mathf.Abs(dirX));
 
         if (dashTime < 0)
             rb.velocity = new Vector2(dirX * speed, rb.velocity.y); //Moving in that direction using A or Dd
@@ -70,8 +71,9 @@ public class PlayerMovement : MonoBehaviour
             jumpCounter -= 1;
             rb.velocity = new Vector2(rb.velocity.x, jump); //Movement for up
             POneanimator.SetBool("IsJumping", true);
+            PTwoanimator.SetBool("IsJumping", true);
 
-            
+
 
         } //End of Jump
 

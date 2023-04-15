@@ -9,6 +9,8 @@ public class PlayerTwoCombat : MonoBehaviour
     public GameObject PlayerTwo;
     public GameObject PlayerOne;
 
+    
+
     // Update is called once per frame
     void Update()
     {
@@ -28,10 +30,16 @@ public class PlayerTwoCombat : MonoBehaviour
             PlayerTwo.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
             PlayerOne.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
         }
+
+     
     }
 
     void Shoot()
     {
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        
+        
+            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+          
+        
     }
 }

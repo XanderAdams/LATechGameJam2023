@@ -20,11 +20,15 @@ public class PlayerManager : MonoBehaviour
         {
             PlayerTwo.SetActive(false);
             PlayerOne.SetActive(true);
+            playerMovement.speed = 10;
+            playerMovement.jump = 14;
         }
         else
         {
             PlayerTwo.SetActive(true);
             PlayerOne.SetActive(false);
+            playerMovement.speed = 6;
+            playerMovement.jump = 18;
         }
        
     }

@@ -81,5 +81,12 @@ public class PlayerManager : MonoBehaviour
             playerMovement.jump = 14;
             
         }
+
+        if (collision.gameObject.tag == "Ground")
+        {
+            Debug.Log("Test");
+            playerMovement.POneanimator.SetBool("IsJumping", false);
+            playerMovement.POneanimator.SetBool("IsDashing", false);
+        }
     }
 }

@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public PlayerManager playerManager;
+    public Animator POneanimator;
+    public Animator PTwoanimator;
 
     private Rigidbody2D rb; //Getting the rigidbody
 
@@ -38,6 +40,9 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         float dirX = Input.GetAxisRaw("Horizontal"); //Getting the direction of the object
+
+        POneanimator.SetFloat("Speed", Mathf.Abs(dirX));
+
         if (dashTime < 0)
             rb.velocity = new Vector2(dirX * speed, rb.velocity.y); //Moving in that direction using A or Dd
 
@@ -53,8 +58,9 @@ public class PlayerMovement : MonoBehaviour
             dashTime = maxDash;
             canDash = false;
             Debug.Log("Dash");
-            rb.AddForce((transform.right * lastXDir) * dashPower, ForceMode2D.Impulse); 
-            
+            rb.AddForce((transform.right * lastXDir) * dashPower, ForceMode2D.Impulse);
+            POneanimator.SetBool("IsDashing", true);
+
         }
 
         isGrounded = Physics2D.OverlapCapsule(groundCheck.position, new Vector2(2.95f, 0.45f), CapsuleDirection2D.Horizontal, 0, groundLayer);
@@ -63,6 +69,9 @@ public class PlayerMovement : MonoBehaviour
         {
             jumpCounter -= 1;
             rb.velocity = new Vector2(rb.velocity.x, jump); //Movement for up
+            POneanimator.SetBool("IsJumping", true);
+
+            
 
         } //End of Jump
 
@@ -73,9 +82,9 @@ public class PlayerMovement : MonoBehaviour
         if (hit.collider == gameObject.CompareTag("Ground"))
         {
             jumpCounter = 2;
-            
-            
-                canDash = true;
+
+           
+            canDash = true;
             
             Debug.Log("Ground");
         }

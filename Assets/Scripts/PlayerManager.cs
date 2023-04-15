@@ -6,6 +6,7 @@ public class PlayerManager : MonoBehaviour
 {
     public GameObject PlayerOne;
     public GameObject PlayerTwo;
+    public Rigidbody2D rigidbody;
 
     public PlayerMovement playerMovement;
 
@@ -29,7 +30,7 @@ public class PlayerManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
@@ -41,15 +42,7 @@ public class PlayerManager : MonoBehaviour
                 PlayerTwo.SetActive(true);
                 playerMovement.speed = 6;
                 playerMovement.jump = 18;
-                /*Debug.Log("Test1");
-                PlayerOne.SetActive(false);
-                Debug.Log("Test2");
-                POneActive = false;
-                Debug.Log("Test3");
-                PlayerTwo.SetActive(true);
-                Debug.Log("Test4");
-                PTwoActive = true;
-                Debug.Log("Test5");*/
+                
             }
             else
             {
@@ -60,6 +53,31 @@ public class PlayerManager : MonoBehaviour
                 playerMovement.speed = 10;
                 playerMovement.jump = 14;
             }
+        }
+
+        
+    }*/
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Dark")
+        {
+            PlayerOne.SetActive(false);
+            POneActive = false;
+            PlayerTwo.SetActive(true);
+            playerMovement.speed = 6;
+            playerMovement.jump = 18;
+
+        }
+        
+        if (collision.gameObject.tag == "Light")
+        {
+            PlayerOne.SetActive(true);
+            POneActive = true;
+            PlayerTwo.SetActive(false);
+
+            playerMovement.speed = 10;
+            playerMovement.jump = 14;
         }
     }
 }

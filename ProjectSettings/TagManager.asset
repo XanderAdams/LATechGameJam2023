@@ -8,6 +8,8 @@ TagManager:
   - Light
   - Attack
   - Enemy
+  - FallZone
+  - Dark
   layers:
   - Default
   - TransparentFX

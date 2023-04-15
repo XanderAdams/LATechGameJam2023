@@ -8,6 +8,7 @@ public class PlayerOneCombat : MonoBehaviour
     public GameObject PlayerOne;
     public bool Attack = false;
     public float AttackTime = 0.5f;
+    public GameObject PlayerTwo;
 
     // Update is called once per frame
     void Update()
@@ -25,11 +26,13 @@ public class PlayerOneCombat : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.D))
         {
             PlayerOne.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            PlayerTwo.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         }
 
         if (Input.GetKeyDown(KeyCode.A))
         {
             PlayerOne.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+            PlayerTwo.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
         }
 
         if (Attack == true)

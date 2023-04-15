@@ -1336,13 +1336,13 @@ PrefabInstance:
       value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2479565287071371839, guid: b3a55b69ac470fe43ac8100d86d622e2, type: 3}
-      propertyPath: POneanimator
-      value: 
-      objectReference: {fileID: 1742195713}
+      propertyPath: maxDash
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 2479565287071371839, guid: b3a55b69ac470fe43ac8100d86d622e2, type: 3}
-      propertyPath: PTwoanimator
-      value: 
-      objectReference: {fileID: 114402157}
+      propertyPath: dashPower
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 2479565287071371839, guid: b3a55b69ac470fe43ac8100d86d622e2, type: 3}
       propertyPath: playerManager
       value: 

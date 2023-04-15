@@ -4,22 +4,46 @@ using UnityEngine;
 
 public class EnemyFire : MonoBehaviour
 {
-    public Transform target;
+    public Transform Target;
     public Transform gun;
+    public Transform firePoint;
+    public GameObject bulletPrefab;
     public float Range;
-    Vector2 Direction;
+    public bool Detect = false;
+    
+    void Update()
+    {
+        Quaternion rotation = Quaternion.LookRotation
+             (Target.transform.position - transform.position, transform.TransformDirection(Vector3.up));
+        transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
 
-    void update()
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.tag == "Player")
+            {
+                Detect = true;
+            }
+        }
+
+        void OnTriggerExit2D(Collider2D other)
+        {
+            if (other.tag == "Player")
+            {
+                Detect = false;
+            }
+        }
+
+        if(Detect = true)
+        {
+            Shoot();
+        }
+    }
+    void Shoot()
     {
         
-
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, 20);
-        Debug.Log(hit.transform.name);
-        Debug.DrawRay (transform.position, -Vector2.up, Color.red, 20);
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        
     }
 
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.DrawWireSphere(transform.position, Range);
-    }
 }
+

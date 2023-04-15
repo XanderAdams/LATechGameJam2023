@@ -16,12 +16,15 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundLayer;
     bool isGrounded;
 
+    
+
     private int jumpCounter;
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>(); //Automatically gathers the component off of the object the script is on
+        
     }
     void Update()
     {

@@ -7,6 +7,8 @@ public class PlayerManager : MonoBehaviour
     public GameObject PlayerOne;
     public GameObject PlayerTwo;
 
+    public PlayerMovement playerMovement;
+
     public bool POneActive;
     //public bool PTwoActive;
 
@@ -37,6 +39,8 @@ public class PlayerManager : MonoBehaviour
                 PlayerOne.SetActive(false);
                 POneActive = false;
                 PlayerTwo.SetActive(true);
+                playerMovement.speed = 6;
+                playerMovement.jump = 12;
                 /*Debug.Log("Test1");
                 PlayerOne.SetActive(false);
                 Debug.Log("Test2");
@@ -52,6 +56,9 @@ public class PlayerManager : MonoBehaviour
                 PlayerOne.SetActive(true);
                 POneActive = true;
                 PlayerTwo.SetActive(false);
+
+                playerMovement.speed = 10;
+                playerMovement.jump = 16;
             }
         }
     }

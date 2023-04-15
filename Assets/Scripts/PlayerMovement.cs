@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    public PlayerManager playerManager;
 
     private Rigidbody2D rb; //Getting the rigidbody
 
@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     private int jumpCounter;
 
-    private bool canDash = true;
+    public bool canDash = true;
     public float dashPower = 20f;
     public float dashTime = 0;
     public float maxDash = 104;
@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
 
         canDash = (dashTime < 0);
 
-        if (Input.GetKey(KeyCode.LeftShift) && canDash)
+        if (Input.GetKey(KeyCode.LeftShift) && canDash && playerManager.POneActive == true)
         {
             dashTime = maxDash;
             canDash = false;
@@ -73,7 +73,10 @@ public class PlayerMovement : MonoBehaviour
         if (hit.collider == gameObject.CompareTag("Ground"))
         {
             jumpCounter = 2;
-            canDash = true;
+            
+            
+                canDash = true;
+            
             Debug.Log("Ground");
         }
 

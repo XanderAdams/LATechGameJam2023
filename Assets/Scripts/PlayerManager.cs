@@ -67,6 +67,7 @@ public class PlayerManager : MonoBehaviour
             PlayerTwo.SetActive(true);
             playerMovement.speed = 6;
             playerMovement.jump = 18;
+            
 
         }
         
@@ -78,6 +79,7 @@ public class PlayerManager : MonoBehaviour
 
             playerMovement.speed = 10;
             playerMovement.jump = 14;
+            
         }
     }
 }

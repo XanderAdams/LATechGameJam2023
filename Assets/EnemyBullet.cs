@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
+    public float speed = 20f;
+    public Rigidbody2D rigidbody2D;
+    
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        rigidbody2D.velocity = transform.right * -speed;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        Destroy(gameObject);
     }
 }

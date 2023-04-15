@@ -40,7 +40,7 @@ public class PlayerManager : MonoBehaviour
                 POneActive = false;
                 PlayerTwo.SetActive(true);
                 playerMovement.speed = 6;
-                playerMovement.jump = 16;
+                playerMovement.jump = 18;
                 /*Debug.Log("Test1");
                 PlayerOne.SetActive(false);
                 Debug.Log("Test2");
@@ -58,7 +58,7 @@ public class PlayerManager : MonoBehaviour
                 PlayerTwo.SetActive(false);
 
                 playerMovement.speed = 10;
-                playerMovement.jump = 12;
+                playerMovement.jump = 14;
             }
         }
     }

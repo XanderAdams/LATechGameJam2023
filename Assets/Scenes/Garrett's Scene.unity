@@ -530,6 +530,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  dashPower: 15
+  dashTime: 0
+  maxDash: 25
 --- !u!50 &894396117
 Rigidbody2D:
   serializedVersion: 4
@@ -546,7 +549,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 4
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: aa25b93b465dfed4ea04c0e2bf7aa80a, type: 2}
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -579,7 +582,7 @@ GameObject:
   - component: {fileID: 932145880}
   - component: {fileID: 932145879}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Detection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -656,7 +659,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -806,7 +809,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &1375056258
 Rigidbody2D:
   serializedVersion: 4
@@ -884,7 +887,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Color: {r: 0.8301887, g: 0.30857953, b: 0.30857953, a: 1}
   m_FlipX: 0
@@ -924,9 +927,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d8e5b8b00ffd8a47a95644417fdee42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 400
+  wantedSpeed: 400
   target: {fileID: 894396114}
   nextWayPointDis: 3
+  PlayerInArea: 0
 --- !u!114 &1375056263
 MonoBehaviour:
   m_ObjectHideFlags: 0

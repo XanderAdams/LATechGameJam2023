@@ -16,22 +16,46 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundLayer;
     bool isGrounded;
 
-    
 
     private int jumpCounter;
 
+    private bool canDash = true;
+    public float dashPower = 20f;
+    public float dashTime = 0;
+    public float maxDash = 104;
+    private float lastXDir = 1 ;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>(); //Automatically gathers the component off of the object the script is on
         
     }
+
+    void FixedUpdate()
+    {
+        dashTime -= 1;
+    }
     void Update()
     {
         float dirX = Input.GetAxisRaw("Horizontal"); //Getting the direction of the object
-        rb.velocity = new Vector2(dirX * speed, rb.velocity.y); //Moving in that direction using A or D
+        if (dashTime < 0)
+            rb.velocity = new Vector2(dirX * speed, rb.velocity.y); //Moving in that direction using A or Dd
 
-        
+        if (dirX > 0)
+            lastXDir = 1;
+        if (dirX < 0)
+            lastXDir = -1;
+
+        canDash = (dashTime < 0);
+
+        if (Input.GetKey(KeyCode.LeftShift) && canDash)
+        {
+            dashTime = maxDash;
+            canDash = false;
+            Debug.Log("Dash");
+            rb.AddForce((transform.right * lastXDir) * dashPower, ForceMode2D.Impulse); 
+            
+        }
 
         isGrounded = Physics2D.OverlapCapsule(groundCheck.position, new Vector2(2.95f, 0.45f), CapsuleDirection2D.Horizontal, 0, groundLayer);
 
@@ -43,20 +67,22 @@ public class PlayerMovement : MonoBehaviour
         } //End of Jump
 
 
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 3);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 5);
         Debug.DrawRay(transform.position, Vector2.down, Color.green);
 
         if (hit.collider == gameObject.CompareTag("Ground"))
         {
             jumpCounter = 2;
-            Debug.Log(hit);
+            canDash = true;
+            Debug.Log("Ground");
         }
 
-
-
-
-
     }// End of Update
-
+    
+    /*void Dash()
+    {
+        rb.AddForce(new Vector2(-5f, 0f), ForceMode2D.Impulse);
+    }*/
+    
 
 } //End of Class

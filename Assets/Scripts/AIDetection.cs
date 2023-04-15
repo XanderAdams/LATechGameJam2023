@@ -5,8 +5,8 @@ using Pathfinding;
 
 public class AIDetection : MonoBehaviour
 {
-    public float Speed = 200f;
-
+    private float Speed = 0f;
+    public float wantedSpeed = 200f;
     public Transform target;
     
     public float nextWayPointDis = 3f;
@@ -14,26 +14,38 @@ public class AIDetection : MonoBehaviour
     Path path;
     int currentWaypoint = 0;
     bool reachedEndOfPath = false;
+    public bool PlayerInArea = false;
+
+
 
     Seeker seeker;
     Rigidbody2D rb;
 
+    
 
     void Start()
     {
-
+        
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         
-        //InvokeRepeating("UpdatePath", 0f, .5f);
+        InvokeRepeating("UpdatePath", 0f, .5f);
         
     }
 
-    void OnTriggerStay2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
         {
-            UpdatePath();
+            Speed = wantedSpeed;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            Speed = 0f;
         }
     }
 

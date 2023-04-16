@@ -21,8 +21,6 @@ public class AIDetection : MonoBehaviour
     Seeker seeker;
     Rigidbody2D rb;
 
-    
-
     void Start()
     {
         
@@ -94,5 +92,4 @@ public class AIDetection : MonoBehaviour
                     currentWaypoint++;
                 }
             }
-
 }

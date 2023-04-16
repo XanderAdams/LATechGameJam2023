@@ -2,3 +2,8 @@ https://opengameart.org/content/square-block-textures
 CC0
 Square Block Textures
 Author etqws3
+
+https://opengameart.org/content/swish-bamboo-stick-weapon-swhoshes
+CC0
+Slash(swoosh-22), Dash(swoosh-28)
+Iwan Gabovitch/(Submitted by qubodup)

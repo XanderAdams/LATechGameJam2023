@@ -21,7 +21,7 @@ public class PlayerOneCombat : MonoBehaviour
             Melee.SetActive(true);
             Attack = true;
 
-
+            FindObjectOfType<AudioManagerX>().play("Slash");
 
 
         }

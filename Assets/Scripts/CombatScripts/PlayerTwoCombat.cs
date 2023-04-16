@@ -67,6 +67,8 @@ public class PlayerTwoCombat : MonoBehaviour
         {
             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             BulletCount--;
+
+            FindObjectOfType<AudioManagerX>().play("Spell Shot");
         }
     }
 }

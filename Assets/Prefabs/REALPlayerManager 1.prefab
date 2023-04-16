@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 6403297205851216389}
   m_Layer: 7
   m_Name: Attack
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -448,6 +448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   rigidbody2D: {fileID: 8841757509827516248}
+  slider: {fileID: 0}
 --- !u!70 &6403297204598910952
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -691,6 +692,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 3084802201759253990, guid: 19cbb4c0c8aefaf4eb893586bcd7ea6c, type: 3}
   PlayerTwo: {fileID: 8841757511646862292}
   PlayerOne: {fileID: 8841757510125840074}
+  BulletCount: 5
 --- !u!95 &8841757511646862302
 Animator:
   serializedVersion: 4

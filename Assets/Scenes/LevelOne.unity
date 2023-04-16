@@ -1363,6 +1363,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: POneAttack
       objectReference: {fileID: 0}
+    - target: {fileID: 8841757509754149342, guid: b245bbfc66e54944d85dfa6bbd7bdd5e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.665
+      objectReference: {fileID: 0}
+    - target: {fileID: 8841757509754149342, guid: b245bbfc66e54944d85dfa6bbd7bdd5e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.277
+      objectReference: {fileID: 0}
     - target: {fileID: 8841757509827516245, guid: b245bbfc66e54944d85dfa6bbd7bdd5e, type: 3}
       propertyPath: m_Name
       value: REALPlayerManager 1

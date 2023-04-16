@@ -78,14 +78,3 @@ MonoBehaviour:
     playOnAwake: 1
     output: {fileID: -3746176300525638280, guid: 8577eaf920256554db4803f19fa98ddd, type: 2}
     reverbPreset: 0
-  - name: Spell Shot
-    atPosition: 0
-    clip: {fileID: 8300000, guid: 879c233834e5f4244b24c2ebbf0da900, type: 3}
-    volume: 1
-    pitch: 1
-    spatialBlend: 0
-    source: {fileID: 0}
-    loop: 0
-    playOnAwake: 1
-    output: {fileID: -3746176300525638280, guid: 8577eaf920256554db4803f19fa98ddd, type: 2}
-    reverbPreset: 0

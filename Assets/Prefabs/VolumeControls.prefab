@@ -678,7 +678,7 @@ GameObject:
   - component: {fileID: 8411274684034084998}
   - component: {fileID: 8411274684034084999}
   m_Layer: 5
-  m_Name: Volume Controls
+  m_Name: VolumeControls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

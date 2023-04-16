@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseMenu : MonoBehaviour
+public class PauseMenu : MonoBehaviour    
 {
+    
+
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
+
+    public GameObject VolumeControls;
 
     // Update is called once per frame
     void Update()
@@ -23,6 +27,17 @@ public class PauseMenu : MonoBehaviour
                 Pause();
             }
         }
+
+        
+
+        
+    }
+
+   public void CloseAudio()
+    {
+        VolumeControls.SetActive(false);
+        pauseMenuUI.SetActive(true);
+
     }
 
     public void Resume()
@@ -54,5 +69,12 @@ public class PauseMenu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1f;
+    }
+
+    public void ManageAudio()
+    {
+        pauseMenuUI.SetActive(false);
+        VolumeControls.SetActive(true);
+        
     }
 }

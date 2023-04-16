@@ -9,12 +9,15 @@ public class PlayerOneCombat : MonoBehaviour
     public bool Attack = false;
     public float AttackTime = 0.5f;
     public GameObject PlayerTwo;
+    public float AttackRate = 1f;
+    private float AttackNext;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.J) && Time.time > AttackNext)
         {
+            AttackNext = Time.time + AttackRate;
             Melee.SetActive(true);
             Attack = true;
 

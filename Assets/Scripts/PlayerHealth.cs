@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour
     public float health = 10;
     public Rigidbody2D rigidbody2D;
     public Slider slider;
+    public PlayerOneCombat playerOneCombat;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.CompareTag("Enemy")&& playerOneCombat.Attack == false)
         {
             Debug.Log("Test");
             health -= 1;

@@ -21,7 +21,7 @@ public class PlayerOneCombat : MonoBehaviour
             Melee.SetActive(true);
             Attack = true;
 
-            FindObjectOfType<AudioManagerX>().play("Slash");
+
 
 
         }
@@ -33,6 +33,18 @@ public class PlayerOneCombat : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.A))
+        {
+            PlayerOne.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+            PlayerTwo.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            PlayerOne.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            PlayerTwo.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             PlayerOne.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
             PlayerTwo.transform.rotation = Quaternion.Euler(0f, 180f, 0f);

@@ -84,6 +84,37 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6403297203986298368}
   m_Enabled: 1
+--- !u!1 &6539098089491918912
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2111152755026595405}
+  m_Layer: 7
+  m_Name: Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2111152755026595405
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6539098089491918912}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8841757509827516251}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8841757509754149336
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,6 +376,7 @@ GameObject:
   - component: {fileID: 8841757509827516248}
   - component: {fileID: 8841757509827516255}
   - component: {fileID: 6403297204598910952}
+  - component: {fileID: 5340102489875135914}
   m_Layer: 7
   m_Name: REALPlayerManager 1
   m_TagString: Player
@@ -360,7 +392,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8841757509827516245}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.23, y: -2.2, z: 0}
+  m_LocalPosition: {x: -6.23, y: -2.247, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -368,6 +400,7 @@ Transform:
   - {fileID: 8841757511646862298}
   - {fileID: 8841757509756152022}
   - {fileID: 6403297203986298371}
+  - {fileID: 2111152755026595405}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -449,6 +482,7 @@ MonoBehaviour:
   health: 10
   rigidbody2D: {fileID: 8841757509827516248}
   slider: {fileID: 0}
+  playerOneCombat: {fileID: 0}
 --- !u!70 &6403297204598910952
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -463,7 +497,23 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1}
+  m_Size: {x: 0.75, y: 1}
+  m_Direction: 0
+--- !u!70 &5340102489875135914
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8841757509827516245}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1.25, y: 1.25}
   m_Direction: 0
 --- !u!1 &8841757510125840074
 GameObject:
@@ -569,6 +619,7 @@ MonoBehaviour:
   Attack: 0
   AttackTime: 0.25
   PlayerTwo: {fileID: 8841757511646862292}
+  AttackRate: 1
 --- !u!95 &8841757510125840076
 Animator:
   serializedVersion: 4

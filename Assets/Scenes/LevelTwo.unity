@@ -2243,7 +2243,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8841757509827516251, guid: b245bbfc66e54944d85dfa6bbd7bdd5e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -21.38
+      value: -21.45
       objectReference: {fileID: 0}
     - target: {fileID: 8841757509827516251, guid: b245bbfc66e54944d85dfa6bbd7bdd5e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2289,6 +2289,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8841757511646862292, guid: b245bbfc66e54944d85dfa6bbd7bdd5e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8841757511646862297, guid: b245bbfc66e54944d85dfa6bbd7bdd5e, type: 3}
       propertyPath: BulletCount
       value: 5
@@ -2297,6 +2301,10 @@ PrefabInstance:
       propertyPath: bulletPrefab
       value: 
       objectReference: {fileID: 3084802201759253990, guid: 19cbb4c0c8aefaf4eb893586bcd7ea6c, type: 3}
+    - target: {fileID: 8841757511646862298, guid: b245bbfc66e54944d85dfa6bbd7bdd5e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b245bbfc66e54944d85dfa6bbd7bdd5e, type: 3}
 --- !u!114 &557529315 stripped

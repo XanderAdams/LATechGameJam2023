@@ -20,43 +20,30 @@ public class PlayerManager : MonoBehaviour
         {
             PlayerTwo.SetActive(false);
             PlayerOne.SetActive(true);
+            playerMovement.speed = 10;
+            playerMovement.jump = 14;
         }
         else
         {
             PlayerTwo.SetActive(true);
             PlayerOne.SetActive(false);
+            playerMovement.speed = 6;
+            playerMovement.jump = 18;
         }
        
     }
 
     // Update is called once per frame
-    /*void Update()
+    void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (playerMovement.dashTime < 0)
         {
-            
-            if (POneActive == true)
-            {
-                PlayerOne.SetActive(false);
-                POneActive = false;
-                PlayerTwo.SetActive(true);
-                playerMovement.speed = 6;
-                playerMovement.jump = 18;
-                
-            }
-            else
-            {
-                PlayerOne.SetActive(true);
-                POneActive = true;
-                PlayerTwo.SetActive(false);
-
-                playerMovement.speed = 10;
-                playerMovement.jump = 14;
-            }
+            playerMovement.POneanimator.SetBool("IsDashing", false);
         }
 
-        
-    }*/
+
+
+    }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {

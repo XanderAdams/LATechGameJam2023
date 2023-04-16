@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 971454405859940573}
   - component: {fileID: 971454405859940572}
   m_Layer: 0
-  m_Name: Audio Manager
+  m_Name: AudioManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,6 +70,17 @@ MonoBehaviour:
   - name: Dash
     atPosition: 0
     clip: {fileID: 8300000, guid: fff6b586671637a49801ce91b9e43148, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0
+    source: {fileID: 0}
+    loop: 0
+    playOnAwake: 1
+    output: {fileID: -3746176300525638280, guid: 8577eaf920256554db4803f19fa98ddd, type: 2}
+    reverbPreset: 0
+  - name: Spell Shot
+    atPosition: 0
+    clip: {fileID: 8300000, guid: 879c233834e5f4244b24c2ebbf0da900, type: 3}
     volume: 1
     pitch: 1
     spatialBlend: 0

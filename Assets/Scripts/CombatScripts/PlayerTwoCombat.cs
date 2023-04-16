@@ -35,7 +35,19 @@ public class PlayerTwoCombat : MonoBehaviour
             PlayerOne.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
         }
 
-        if(Shot == true)
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            PlayerOne.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            PlayerTwo.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            PlayerOne.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+            PlayerTwo.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+        }
+
+        if (Shot == true)
         {
             BulletTime -= Time.deltaTime;
             if( BulletTime < 0)

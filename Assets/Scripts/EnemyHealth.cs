@@ -25,6 +25,15 @@ public class EnemyHealth : MonoBehaviour
             }
         }
 
+        if (collision.CompareTag("POneAttack"))
+        {
+            health -= 5;
+            if (health <= 0)
+            {
+                Destroy(gameObject);
+            }
+        } 
+
         
     }
 }

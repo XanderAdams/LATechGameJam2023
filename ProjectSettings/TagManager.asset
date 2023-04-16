@@ -11,6 +11,7 @@ TagManager:
   - FallZone
   - Dark
   - EnemyBullet
+  - POneAttack
   layers:
   - Default
   - TransparentFX

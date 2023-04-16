@@ -26,7 +26,18 @@ public class PlayerHealth : MonoBehaviour
     {
         if (collision.CompareTag("Enemy")&& playerOneCombat.Attack == false)
         {
-            Debug.Log("Test");
+            Debug.Log("LOOK AT ME");
+            health -= 1;
+            if (health == 0)
+            {
+                Destroy(gameObject);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+        }
+
+        if (playerOneCombat.Attack == false&& collision.CompareTag("EnemyBullet"))
+        {
+            Debug.Log("LOOK AT ME");
             health -= 1;
             if (health == 0)
             {

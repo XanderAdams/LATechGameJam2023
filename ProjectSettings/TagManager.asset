@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - FallZone
   - Dark
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX

@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &971454405859940563
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 971454405859940573}
+  - component: {fileID: 971454405859940572}
+  m_Layer: 0
+  m_Name: Audio Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &971454405859940573
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971454405859940563}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.395995, y: -3.1500893, z: -0.0021845298}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &971454405859940572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971454405859940563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef97b8b5f29c20c4daf6ed216e542ed7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: BGM
+    atPosition: 0
+    clip: {fileID: 8300000, guid: 04501ccf7af5d274983f9b2ec0407a09, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0
+    source: {fileID: 0}
+    loop: 1
+    playOnAwake: 1
+    output: {fileID: 1060017567307191973, guid: 8577eaf920256554db4803f19fa98ddd, type: 2}
+    reverbPreset: 0
+  - name: Slash
+    atPosition: 0
+    clip: {fileID: 8300000, guid: 1febbd06ae2bb9549ab7a2b2ecff243b, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0
+    source: {fileID: 0}
+    loop: 0
+    playOnAwake: 1
+    output: {fileID: -3746176300525638280, guid: 8577eaf920256554db4803f19fa98ddd, type: 2}
+    reverbPreset: 0
+  - name: Dash
+    atPosition: 0
+    clip: {fileID: 8300000, guid: fff6b586671637a49801ce91b9e43148, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0
+    source: {fileID: 0}
+    loop: 0
+    playOnAwake: 1
+    output: {fileID: -3746176300525638280, guid: 8577eaf920256554db4803f19fa98ddd, type: 2}
+    reverbPreset: 0

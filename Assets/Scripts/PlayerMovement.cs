@@ -59,6 +59,7 @@ public class PlayerMovement : MonoBehaviour
             dashTime = maxDash;
             canDash = false;
             Debug.Log("Dash");
+            FindObjectOfType<AudioManagerX>().play("Dash");
             rb.AddForce((transform.right * lastXDir) * dashPower, ForceMode2D.Impulse);
             POneanimator.SetBool("IsDashing", true);
 

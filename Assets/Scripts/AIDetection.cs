@@ -43,7 +43,7 @@ public class AIDetection : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Speed = 0f;
+           // Speed = 0f;
         }
     }
 

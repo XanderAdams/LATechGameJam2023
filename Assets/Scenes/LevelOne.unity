@@ -1783,6 +1783,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 971454405859940572, guid: c28ce6a08b3193042be34610eacb2d2c, type: 3}
+      propertyPath: sounds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 971454405859940572, guid: c28ce6a08b3193042be34610eacb2d2c, type: 3}
+      propertyPath: sounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 879c233834e5f4244b24c2ebbf0da900, type: 3}
+    - target: {fileID: 971454405859940572, guid: c28ce6a08b3193042be34610eacb2d2c, type: 3}
+      propertyPath: sounds.Array.data[3].name
+      value: Spell Shot
+      objectReference: {fileID: 0}
+    - target: {fileID: 971454405859940572, guid: c28ce6a08b3193042be34610eacb2d2c, type: 3}
+      propertyPath: sounds.Array.data[3].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 971454405859940572, guid: c28ce6a08b3193042be34610eacb2d2c, type: 3}
+      propertyPath: sounds.Array.data[3].output
+      value: 
+      objectReference: {fileID: -3746176300525638280, guid: 8577eaf920256554db4803f19fa98ddd, type: 2}
+    - target: {fileID: 971454405859940572, guid: c28ce6a08b3193042be34610eacb2d2c, type: 3}
+      propertyPath: sounds.Array.data[3].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 971454405859940572, guid: c28ce6a08b3193042be34610eacb2d2c, type: 3}
+      propertyPath: sounds.Array.data[3].playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 971454405859940573, guid: c28ce6a08b3193042be34610eacb2d2c, type: 3}
       propertyPath: m_RootOrder
       value: 19

@@ -10,17 +10,19 @@ public class PlayerTwoCombat : MonoBehaviour
     public GameObject PlayerOne;
 
     private float BulletTime = 2.0f;
-    public float BulletCount = 5.0f;
-    private bool Shot;
-    
+    public float FireRate = 1f;
+    private float FireNext;
+
+
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.J) && Time.time > FireNext)
         {
+            FireNext = Time.time + FireRate;
             Shoot();
-            Shot = true;
+            
         }
 
         if(Input.GetKeyDown(KeyCode.D))
@@ -47,28 +49,17 @@ public class PlayerTwoCombat : MonoBehaviour
             PlayerTwo.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
         }
 
-        if (Shot == true)
-        {
-            BulletTime -= Time.deltaTime;
-            if( BulletTime < 0)
-            {
-                if (BulletCount < 5.0f)
-                {
-                    BulletCount += 1;
-                    BulletTime = 0.5f;
-                }
-            }
-        }
+        
     }
 
     void Shoot()
     {
-        if (BulletCount > 0)
-        {
+        
+        
             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-            BulletCount--;
+            
 
             FindObjectOfType<AudioManagerX>().play("Spell Shot");
-        }
+        
     }
 }

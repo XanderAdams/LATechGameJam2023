@@ -41,11 +41,11 @@ public class Bullet : MonoBehaviour
             
         }*/
 
-        if (collision.gameObject.tag == ("Light"))
+        /*if (collision.gameObject.tag == ("Light"))
         {
             Destroy(gameObject);
             
-        }
+        }*/
 
     }
 

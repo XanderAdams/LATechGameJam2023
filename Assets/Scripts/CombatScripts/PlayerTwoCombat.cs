@@ -58,6 +58,7 @@ public class PlayerTwoCombat : MonoBehaviour
         
             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             
+            FindObjectOfType<AudioManagerX>().play("SpellShot");
 
             FindObjectOfType<AudioManagerX>().play("Spell Shot");
         

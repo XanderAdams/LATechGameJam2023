@@ -127,9 +127,9 @@ GameObject:
   - component: {fileID: 8841757509754149343}
   - component: {fileID: 6403297205851216389}
   - component: {fileID: 5540959690701517995}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Attack
-  m_TagString: Attack
+  m_TagString: POneAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,7 +142,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8841757509754149336}
   m_LocalRotation: {x: 0, y: 0, z: 0.06735482, w: -0.99772906}
-  m_LocalPosition: {x: 1.1947471, y: 1, z: 1}
+  m_LocalPosition: {x: 0.665, y: 0.277, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -472,7 +472,7 @@ MonoBehaviour:
   health: 10
   rigidbody2D: {fileID: 8841757509827516248}
   slider: {fileID: 0}
-  playerOneCombat: {fileID: 0}
+  playerOneCombat: {fileID: 8841757510125840079}
 --- !u!70 &6403297204598910952
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

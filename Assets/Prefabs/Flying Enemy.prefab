@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6356004241279123752}
   - component: {fileID: 6356004241279123750}
-  - component: {fileID: 6356004241279123753}
-  m_Layer: 0
+  - component: {fileID: 5015903248500624746}
+  m_Layer: 10
   m_Name: Detection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &6356004241279123753
+--- !u!58 &5015903248500624746
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,9 +98,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.000000014901161}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.50000006
 --- !u!1 &6356004242987899519
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d8e5b8b00ffd8a47a95644417fdee42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wantedSpeed: 900
+  wantedSpeed: 700
   target: {fileID: 0}
   nextWayPointDis: 0.5
   PlayerInArea: 0

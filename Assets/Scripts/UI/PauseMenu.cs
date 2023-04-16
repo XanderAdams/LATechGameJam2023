@@ -13,6 +13,8 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject VolumeControls;
 
+    public bool AudioOpen = false;
+
     // Update is called once per frame
     void Update()
     {
@@ -37,6 +39,7 @@ public class PauseMenu : MonoBehaviour
     {
         VolumeControls.SetActive(false);
         pauseMenuUI.SetActive(true);
+        AudioOpen = false;
 
     }
 
@@ -49,9 +52,12 @@ public class PauseMenu : MonoBehaviour
 
     void Pause ()
     {
-        pauseMenuUI.SetActive(true);
-        Time.timeScale = 0f;
-        GameIsPaused = true;
+        if (AudioOpen == false)
+        {
+            pauseMenuUI.SetActive(true);
+            Time.timeScale = 0f;
+            GameIsPaused = true;
+        }
     }
 
     public void LoadMenu()
@@ -75,6 +81,7 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenuUI.SetActive(false);
         VolumeControls.SetActive(true);
+        AudioOpen = true;
         
     }
 }

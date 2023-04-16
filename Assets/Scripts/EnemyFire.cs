@@ -11,6 +11,8 @@ public class EnemyFire : MonoBehaviour
     public bool Detect = false;
     public float FireRate = 1f;
     private float FireNext;
+    public SpriteRenderer spriteRenderer;
+    public Sprite newSprite;
     void Update()
     {
         Quaternion rotation = Quaternion.LookRotation
@@ -31,7 +33,14 @@ public class EnemyFire : MonoBehaviour
         {
             Debug.Log("hit");
             Detect = true;
+            ChangeSprite();
+
         }
+    }
+
+    void ChangeSprite()
+    {
+        spriteRenderer.sprite = newSprite;
     }
 
     void OnTriggerExit2D(Collider2D collision)
